@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="NFXHTTPModelCoreData" representedClassName="NFXHTTPModelCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="noResponse" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="randomHash" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestBodyLength" optional="YES" attributeType="Integer 32" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="requestCachePolicy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="requestHeaders" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestMethod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestTimeout" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="responseBodyLength" optional="YES" attributeType="Integer 32" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="responseDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="responseHeaders" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="responseStatus" optional="YES" attributeType="Integer 32" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="responseTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="responseType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortType" optional="YES" attributeType="String" defaultValueString="Other" syncable="YES"/>
+        <attribute name="timeInterval" optional="YES" attributeType="Float" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="NFXHTTPModelCoreData" positionX="-63" positionY="-18" width="128" height="330"/>
+    </elements>
+</model>

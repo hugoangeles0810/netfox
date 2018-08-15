@@ -58,7 +58,7 @@ open class NFX: NSObject
     fileprivate var lastVisitDate: Date = Date()
     internal var cacheStoragePolicy = URLCache.StoragePolicy.notAllowed
 
-    @objc open func start()
+    @objc open func start(enabledPersistent: Bool)
     {
         guard !self.started else {
             showMessage("Already started!")
@@ -66,9 +66,15 @@ open class NFX: NSObject
         }
 
         self.started = true
+        NFXHTTPModelManager.sharedInstance.isPersistentEnabled = enabledPersistent
+        
         register()
         enable()
-        clearOldData()
+        if enabledPersistent {
+            NFXCoreDataController.sharedInstance.load()
+        } else {
+            clearOldData()
+        }
         showMessage("Started!")
     #if os(OSX)
         self.addNetfoxToMainMenu()

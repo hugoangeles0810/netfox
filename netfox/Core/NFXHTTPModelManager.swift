@@ -12,7 +12,11 @@ private let _sharedInstance = NFXHTTPModelManager()
 final class NFXHTTPModelManager: NSObject
 {
     static let sharedInstance = NFXHTTPModelManager()
-    fileprivate var models = [NFXHTTPModel]()
+    var isPersistentEnabled = false
+    fileprivate lazy var models = {
+        return isPersistentEnabled ? NFXModelPersistentManager.sharedInstance.getModels() : [NFXHTTPModel]()
+    }()
+    
     private let syncQueue = DispatchQueue(label: "NFXSyncQueue")
     
     func add(_ obj: NFXHTTPModel)
@@ -21,6 +25,10 @@ final class NFXHTTPModelManager: NSObject
             self.models.insert(obj, at: 0)
             NotificationCenter.default.post(name: NSNotification.Name.NFXAddedModel, object: obj)
         }
+        
+        if isPersistentEnabled {
+            NFXModelPersistentManager.sharedInstance.add(obj)
+        }
     }
     
     func clear()
@@ -28,6 +36,10 @@ final class NFXHTTPModelManager: NSObject
         syncQueue.async {
             self.models.removeAll()
             NotificationCenter.default.post(name: NSNotification.Name.NFXClearedModels, object: nil)
+        }
+        
+        if isPersistentEnabled {
+            NFXModelPersistentManager.sharedInstance.clear()
         }
     }
     
@@ -55,4 +67,5 @@ final class NFXHTTPModelManager: NSObject
         
         return array as! [NFXHTTPModel]
     }
+
 }
