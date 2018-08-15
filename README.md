@@ -59,7 +59,7 @@ The above folder contains 3 subfolders: Core, iOS and OSX.
 ```swift
 // AppDelegate
 import netfox_ios
-NFX.sharedInstance().start() // in didFinishLaunchingWithOptions:
+NFX.sharedInstance().start(enabledPersistent: enabledPersistent) // in didFinishLaunchingWithOptions:
 ```
 
 </pre>
@@ -67,7 +67,7 @@ NFX.sharedInstance().start() // in didFinishLaunchingWithOptions:
 #### Objective-C
 ```objective-c
 // AppDelegate
-[[NFX sharedInstance] start]; // in didFinishLaunchingWithOptions:
+[[NFX sharedInstance] start:enabledPersistent]; // in didFinishLaunchingWithOptions:
 ```
 
 Just simple as that!
