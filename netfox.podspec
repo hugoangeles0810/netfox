@@ -16,7 +16,7 @@ DESC
   s.ios.deployment_target = '10.0'
   s.osx.deployment_target = '10.11'
   s.requires_arc = true
-  s.source_files = "netfox/{Core,Persistent}/**/*.{swift,h,m,.xcdatamodel}"
+  s.source_files = "netfox/{Core,Persistent}/**/*.*"
   s.ios.source_files = "netfox/iOS/*.swift"
   s.osx.source_files = "netfox/OSX/*.{swift,xib}"  
 end
