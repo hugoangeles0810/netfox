@@ -52,17 +52,17 @@ class NFXModelPersistentManager {
         model.requestURL = coreDataHttpModel.requestUrl
         model.requestMethod = coreDataHttpModel.requestMethod
         model.requestCachePolicy = coreDataHttpModel.requestCachePolicy
-        model.requestDate = coreDataHttpModel.requestDate
+        model.requestDate = coreDataHttpModel.requestDate as Date?
         model.requestTime = coreDataHttpModel.requestTime
         model.requestTimeout = coreDataHttpModel.requestTimeout
-        model.requestHeaders = [AnyHashable: Any]() // TODO: Change this
+        model.requestHeaders = parse(to: coreDataHttpModel.requestHeaders)
         model.requestBodyLength = coreDataHttpModel.requestBodyLength?.toInt()
         model.requestType = coreDataHttpModel.requestType
         model.responseStatus = coreDataHttpModel.responseStatus?.toInt()
         model.responseType = coreDataHttpModel.responseType
-        model.responseDate = coreDataHttpModel.responseDate
+        model.responseDate = coreDataHttpModel.responseDate as Date?
         model.responseTime = coreDataHttpModel.responseTime
-        model.responseHeaders = [AnyHashable: Any]() // TODO: Change this
+        model.responseHeaders = parse(to: coreDataHttpModel.requestHeaders)
         model.responseBodyLength = coreDataHttpModel.responseBodyLength?.toInt()
         model.timeInterval = coreDataHttpModel.timeInterval?.toFloat()
         model.randomHash = coreDataHttpModel.randomHash as NSString?
@@ -77,17 +77,17 @@ class NFXModelPersistentManager {
         coreDataModel.requestUrl = model.requestURL
         coreDataModel.requestMethod = model.requestMethod
         coreDataModel.requestCachePolicy = model.requestCachePolicy
-        coreDataModel.requestDate = model.requestDate
+        coreDataModel.requestDate = model.requestDate as NSDate?
         coreDataModel.requestTime = model.requestTime
         coreDataModel.requestTimeout = model.requestTimeout
-        coreDataModel.requestHeaders = nil // TODO: Change this
+        coreDataModel.requestHeaders = json(from: model.requestHeaders)
         coreDataModel.requestBodyLength = model.requestBodyLength?.toNSNumber()
         coreDataModel.requestType = model.requestType
         coreDataModel.responseStatus = model.responseStatus?.toNSNumber()
         coreDataModel.responseType = model.responseType
-        coreDataModel.responseDate = model.responseDate
+        coreDataModel.responseDate = model.responseDate as NSDate?
         coreDataModel.responseTime = model.responseTime
-        coreDataModel.responseHeaders = nil // TODO: Change this
+        coreDataModel.responseHeaders = json(from: model.responseHeaders)
         coreDataModel.responseBodyLength = model.responseBodyLength?.toNSNumber()
         coreDataModel.timeInterval = model.timeInterval?.toNSNumber()
         coreDataModel.randomHash = model.randomHash as String?
@@ -95,6 +95,26 @@ class NFXModelPersistentManager {
         coreDataModel.noResponse = model.noResponse
         
         return coreDataModel
+    }
+    
+    func json(from dict: [AnyHashable: Any]?) -> String? {
+        let encoder = JSONEncoder()
+        guard let dictJson = dict as? [String: String],
+            let data = try? encoder.encode(dictJson) else {
+            return nil
+        }
+        return String(data: data, encoding: .utf8)
+    }
+    
+    func parse(to json: String?) -> [String: String]? {
+        let decoder = JSONDecoder()
+        guard let myJson = json,
+            let data = myJson.data(using: .utf8),
+            let dict = try? decoder.decode(Dictionary<String,String>.self, from: data) else {
+            return [String: String]()
+        }
+        
+        return dict
     }
 }
 

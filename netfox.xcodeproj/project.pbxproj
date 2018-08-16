@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64A4515E2125E62F006895EC /* NFXHTTPModelCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A4515D2125E62F006895EC /* NFXHTTPModelCoreData+CoreDataProperties.swift */; };
+		64A4515F2125E62F006895EC /* NFXHTTPModelCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A4515D2125E62F006895EC /* NFXHTTPModelCoreData+CoreDataProperties.swift */; };
+		64A451642125EE96006895EC /* NFXHTTPModelCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A451632125EE96006895EC /* NFXHTTPModelCoreData.swift */; };
+		64A451652125EE96006895EC /* NFXHTTPModelCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A451632125EE96006895EC /* NFXHTTPModelCoreData.swift */; };
 		8201A39D204E3E3F00AB2C3D /* NFXAuthenticationChallengeSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8201A39C204E3E3F00AB2C3D /* NFXAuthenticationChallengeSender.swift */; };
 		8201A39E204E451900AB2C3D /* NFXAuthenticationChallengeSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8201A39C204E3E3F00AB2C3D /* NFXAuthenticationChallengeSender.swift */; };
 		8201A39F204E452200AB2C3D /* NFXLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 826C4E9D1F979AB3008B440C /* NFXLoader.m */; };
@@ -105,6 +109,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		64A4515D2125E62F006895EC /* NFXHTTPModelCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NFXHTTPModelCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		64A451632125EE96006895EC /* NFXHTTPModelCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFXHTTPModelCoreData.swift; sourceTree = "<group>"; };
 		8201A39C204E3E3F00AB2C3D /* NFXAuthenticationChallengeSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFXAuthenticationChallengeSender.swift; sourceTree = "<group>"; };
 		8229AD621F8FB34300A9D613 /* netfox_ios_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netfox_ios_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8229AD641F8FB34300A9D613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -209,9 +215,11 @@
 		9ABD78A121249659002F712E /* Persistent */ = {
 			isa = PBXGroup;
 			children = (
+				64A4515D2125E62F006895EC /* NFXHTTPModelCoreData+CoreDataProperties.swift */,
 				9ABD78A221249693002F712E /* Netfox.xcdatamodeld */,
 				9ABD78AC21249985002F712E /* NFXCoreDataController.swift */,
 				9ABD78AF21249C44002F712E /* NFXModelPersistentManager.swift */,
+				64A451632125EE96006895EC /* NFXHTTPModelCoreData.swift */,
 			);
 			path = Persistent;
 			sourceTree = "<group>";
@@ -485,6 +493,7 @@
 				B3F8BAB01C833AC700F9FBEA /* NFXListController_iOS.swift in Sources */,
 				B3F8BA8E1C833ABC00F9FBEA /* NFXHelper.swift in Sources */,
 				B3F8BA861C833ABC00F9FBEA /* NFXConstants.swift in Sources */,
+				64A451642125EE96006895EC /* NFXHTTPModelCoreData.swift in Sources */,
 				9A9445632124C6D4005702AC /* Netfox.xcdatamodeld in Sources */,
 				B3F8BAAD1C833AC700F9FBEA /* NFXHelper_iOS.swift in Sources */,
 				B3F8BA9A1C833ABC00F9FBEA /* NFXProtocol.swift in Sources */,
@@ -498,6 +507,7 @@
 				B3F8BA881C833ABC00F9FBEA /* NFXDetailsController.swift in Sources */,
 				B3F8BA981C833ABC00F9FBEA /* NFXListController.swift in Sources */,
 				B3F8BAAE1C833AC700F9FBEA /* NFXInfoController_iOS.swift in Sources */,
+				64A4515E2125E62F006895EC /* NFXHTTPModelCoreData+CoreDataProperties.swift in Sources */,
 				B3F8BA9C1C833ABC00F9FBEA /* NFXRawBodyDetailsController.swift in Sources */,
 				B3F8BAAF1C833AC700F9FBEA /* NFXListCell_iOS.swift in Sources */,
 				B3F8BA961C833ABC00F9FBEA /* NFXInfoController.swift in Sources */,
@@ -521,6 +531,7 @@
 				B3F8D6831C833B1700F9FBEA /* NFXSettingsController_OSX.swift in Sources */,
 				B3F8D67C1C833B1700F9FBEA /* NFXDetailsController_OSX.swift in Sources */,
 				9A9445642124C6D4005702AC /* Netfox.xcdatamodeld in Sources */,
+				64A451652125EE96006895EC /* NFXHTTPModelCoreData.swift in Sources */,
 				B3F8BA8F1C833ABC00F9FBEA /* NFXHelper.swift in Sources */,
 				B3F8BA871C833ABC00F9FBEA /* NFXConstants.swift in Sources */,
 				B3F8BA9B1C833ABC00F9FBEA /* NFXProtocol.swift in Sources */,
@@ -534,6 +545,7 @@
 				B3F8BA8D1C833ABC00F9FBEA /* NFXGenericController.swift in Sources */,
 				B3F8BA931C833ABC00F9FBEA /* NFXHTTPModelManager.swift in Sources */,
 				B3F8BA891C833ABC00F9FBEA /* NFXDetailsController.swift in Sources */,
+				64A4515F2125E62F006895EC /* NFXHTTPModelCoreData+CoreDataProperties.swift in Sources */,
 				B3F8BA991C833ABC00F9FBEA /* NFXListController.swift in Sources */,
 				B3F8BA9D1C833ABC00F9FBEA /* NFXRawBodyDetailsController.swift in Sources */,
 				B3F8D6801C833B1700F9FBEA /* NFXListController_OSX.swift in Sources */,
@@ -682,6 +694,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -731,6 +744,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

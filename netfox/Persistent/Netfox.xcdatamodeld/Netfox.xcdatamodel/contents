@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="NFXHTTPModelCoreData" representedClassName="NFXHTTPModelCoreData" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="NFXHTTPModelCoreData" representedClassName="NFXHTTPModelCoreData" syncable="YES">
         <attribute name="noResponse" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="randomHash" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="requestBodyLength" optional="YES" attributeType="Integer 32" usesScalarValueType="NO" syncable="YES"/>
