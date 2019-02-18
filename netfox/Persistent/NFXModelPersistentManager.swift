@@ -20,7 +20,13 @@ class NFXModelPersistentManager {
 
     func add(_ obj: NFXHTTPModel) {
         _ = map(model: obj)
-        try? dataController.viewContext.save()
+        do {
+            if dataController.viewContext.hasChanges {
+                try dataController.viewContext.save()
+            }
+        } catch let e{
+            print("Error while adding request: " + e.localizedDescription)
+        }
     }
     
     func clear() {
